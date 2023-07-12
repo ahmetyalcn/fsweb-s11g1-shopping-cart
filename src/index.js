@@ -3,13 +3,18 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import ProductProvider from "./contexts/ProductContext";
 import './index.css';
+import CartProvider from './contexts/CartContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <App />
+  <BrowserRouter> 
+  <CartProvider>  
+  <ProductProvider>
+      <App />
+    </ProductProvider> 
+    </CartProvider>
   </BrowserRouter>
 );
 

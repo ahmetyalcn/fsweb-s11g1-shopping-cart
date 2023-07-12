@@ -2,6 +2,7 @@ import React from "react";
 import { ScProduct } from "./scParts";
 
 const Product = (props) => {
+  
   return (
     <ScProduct>
       <img src={props.product.image} alt={`${props.product.title} book`} />
